@@ -1,0 +1,4 @@
+HOSTNAME=http://localhost:5000
+
+DB_USERNAME=
+DB_PASSWORD=
