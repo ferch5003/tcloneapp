@@ -1,0 +1,13 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <span class="fw-bold"><%= current_user.full_name %></span>, 
+        <span>@<%= current_user.username %> - <%= l tweet.created_at, format: :short %></span>
+      </div>
+    </div>
+    <div class="row">
+      <span><%= tweet.content %></span>
+    </div>
+  </div>
+</div>

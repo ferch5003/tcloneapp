@@ -1,0 +1,9 @@
+<div class="d-grid gap-4">
+  <h1>Feeds</h1>
+  <% @tweets.each do |tweet| %>
+    <%= render 'shared/tweet', tweet: tweet %>
+  <% end %>
+  <div class="ms-auto">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+</div>

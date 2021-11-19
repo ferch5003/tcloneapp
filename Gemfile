@@ -38,6 +38,9 @@ gem 'faker'
 # FontAwesome for Rails
 gem 'font-awesome-rails', '~> 4.7'
 
+#  "Swiss Army bulldozer" of slugging and permalink plugins for Active Record
+gem 'friendly_id', '~> 5.4.0'
+
 # Wrapper to get Gravatars
 gem 'gravtastic'
 
