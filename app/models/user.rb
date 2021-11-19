@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   include Gravtastic
 
+  acts_as_followable
+  acts_as_follower
   gravtastic
 
   has_many :tweets
