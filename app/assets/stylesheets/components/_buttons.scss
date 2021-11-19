@@ -9,5 +9,12 @@
       color: white !important;
     }
   }
+
+  .btn-outline-#{$color}:hover {
+    @include button-variant($value, $value);
+    @if $color != light {
+      color: white !important;
+    }
+  }
 }
 

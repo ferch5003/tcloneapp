@@ -1,0 +1,12 @@
+<% if flash[:notice] %>
+  <div class="alert alert-info" role="alert">
+    <%= fa_icon "info-circle", class: "me-2" %>
+    <span><%= notice %></span>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= fa_icon 'exclamation-triangle', class: 'me-2' %>
+    <span><%= alert %></span>
+  </div>
+<% end %>
