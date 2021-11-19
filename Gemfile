@@ -83,6 +83,8 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
+  # Set of gems containing strategies for cleaning the database
+  gem 'database_cleaner-active_record'
   # Brings back assigns to controller tests
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
