@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   acts_as_followable
   acts_as_follower
+  acts_as_paranoid
   gravtastic
 
   has_many :tweets
