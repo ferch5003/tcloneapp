@@ -6,6 +6,14 @@
     <div class="collapse navbar-collapse" id="nave-menu">
       <%= link_to 'TCloneApp', root_path, class: 'navbar-brand' %>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'Feeds', feeds_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Home', user_path(current_user.username), class: 'nav-link' %>
+          </li>
+        <% end %>
       </ul>
       <div class="d-flex">
         <% if user_signed_in? %>
