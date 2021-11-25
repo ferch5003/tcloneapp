@@ -1,7 +1,5 @@
 module Users
   class BaseController < ApplicationController
-    before_action :authenticate_user!
-    
     private
 
     def social_user
