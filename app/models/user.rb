@@ -2,7 +2,6 @@ class User < ApplicationRecord
   extend FriendlyId
   include Gravtastic
   
-
   acts_as_followable
   acts_as_follower
   acts_as_paranoid
@@ -15,6 +14,9 @@ class User < ApplicationRecord
 
   has_many :tweets
 
+  scope :get_follows,
+        ->(user_ids) { Users::GetFollowsQuery.call(user_ids: user_ids) }
+
   validates :email, uniqueness: { case_sensitive: false }
   validates :full_name, presence: true
   validates :username, presence: true, uniqueness: { case_sensitive: false }
@@ -25,5 +27,9 @@ class User < ApplicationRecord
 
   def followable_ids
     follows.pluck(:followable_id)
+  end
+
+  def follower_ids
+    followers.pluck(:id)
   end
 end

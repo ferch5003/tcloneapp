@@ -3,7 +3,12 @@
     <div class="row">
       <div class="col">
         <span class="fw-bold"><%= tweet.user.full_name %></span>, 
-        <span>@<%= tweet.user.username %> - <%= l tweet.created_at, format: :short %></span>
+        <span>
+          <%= link_to user_path(tweet.user.username), class: 'link-dark text-underline-hover' do %>
+            @<%= tweet.user.username %>
+          <% end %>
+          - <%= l tweet.created_at, format: :short %>
+        </span>
       </div>
     </div>
     <div class="row">

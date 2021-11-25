@@ -1,2 +1,19 @@
-<h1>Users::Follows#index</h1>
-<p>Find me in app/views/users/follows/index.html.erb</p>
+<div class="d-grid gap-4">
+  <div class="d-grid gap-1">
+    <span class="fw-bold"><%= current_user.full_name %></span>
+    <span>@<%= current_user.username %></span>
+  </div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <h6 class="nav-link active fw-bold">Following</h6>
+    </li>
+  </ul>
+  <div class="d-grid gap-4">
+    <% @follows.each do |social_user| %>
+      <%= render 'shared/social_user', social_user: social_user %>
+    <% end %>
+    <div class="ms-auto">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
+  </div>
+</div>

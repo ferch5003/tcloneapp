@@ -1,0 +1,20 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row">
+        <%= image_tag social_user.gravatar_url, class: 'rounded-circle img-fluid', size: '60x60' %>
+        <div class="d-grid gap-1 ms-4 my-auto">
+          <span class="fw-bold"><%= social_user.full_name %></span>
+          <%= link_to user_path(social_user.username), class: 'link-dark text-underline-hover' do %>
+            <span>@<%= social_user.username %></span>
+          <% end %>
+        </div>
+      </div>
+      <% unless user_followed?(social_user: social_user) %>
+        <div class="my-auto">
+          <%= link_to "Follow", user_followers_path(social_user.username), method: :post, class: 'btn btn-dark' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
