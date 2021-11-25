@@ -3,7 +3,7 @@ module Users
     include Followable
 
     def index
-      @pagy, @followers = pagy_array(User.get_follows(social_user.follower_ids))
+      @pagy, @followers = pagy_array(social_user.get_follows(type: :followers))
     end
 
     def create

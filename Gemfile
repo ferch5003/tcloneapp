@@ -73,6 +73,8 @@ group :development, :test do
 end
 
 group :development do
+  # Add a comment summarizing the current schema
+  gem 'annotate'
   # Styled errors showcase
   gem 'better_errors'
   gem 'binding_of_caller'
