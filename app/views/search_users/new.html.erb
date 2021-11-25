@@ -1,0 +1,12 @@
+<div class="d-grid gap-4">
+  <h1>Search User</h1>
+  <%= search_form_for @q, url: search_users_path, html: { method: :post }, class: 'row' do |f| %>
+    <div class="col-7 col-sm-7 col-md-9 col-lg-9">
+      <%= f.search_field :username_eq, class: 'form-control', placeholder: 'Type the username to find...' %>
+    </div>
+
+    <div class="col-auto">
+      <%= f.submit 'Follow user', class: 'btn btn-primary mb-3' %>
+    </div>
+  <% end %>
+</div>

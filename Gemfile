@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Allow any model to follow any other model
-gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+gem 'acts_as_follower', github: 'brchristian/acts_as_follower', branch: 'patch-1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -46,6 +46,9 @@ gem 'gravtastic'
 
 # Pagination
 gem 'pagy', '~> 4.11'
+
+# Simple and advanced search forms for your Ruby on Rails application
+gem 'ransack', github: 'activerecord-hackery/ransack'
 
 # Soft Deletes
 gem 'paranoia', '~> 2.2'

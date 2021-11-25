@@ -1,7 +1,12 @@
 <div class="d-grid gap-4">
-  <div class="d-grid gap-1">
-    <span class="fw-bold"><%= current_user.full_name %></span>
-    <span>@<%= current_user.username %></span>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="d-grid gap-1">
+      <span class="fw-bold"><%= current_user.full_name %></span>
+      <span>@<%= current_user.username %></span>
+    </div>
+    <div class="my-auto">
+      <%= link_to "Follow another user ", new_search_user_path, class: 'btn btn-primary' %>
+    </div>
   </div>
   <ul class="nav nav-tabs">
     <li class="nav-item">
