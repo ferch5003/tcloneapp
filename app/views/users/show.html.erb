@@ -2,27 +2,7 @@
   <div class="user-background-banner"></div>
   <div class="card">
     <div class="card-body p-4 position-relative">
-      <div class="position-absolute top-0 start-0 translate-middle-y ps-3">
-        <%= image_tag current_user.gravatar_url, class: 'rounded-circle img-fluid img-thumbnail', size: '115x115' %>
-      </div>
-      <div class="d-grid gap-3 mt-5">
-        <div class="d-grid gap-1">
-          <span class="fw-bold"><%= @user.full_name %></span>
-          <span>@<%= @user.username %></span>
-        </div>
-        <div class="row">
-          <div class="col-3">
-            <%= link_to user_follows_path(@user.username), class: 'link-dark text-underline-hover' do %>
-              <span class="fw-bold"><%= @user.follow_count %></span> Following
-            <% end %>
-          </div>
-          <div class="col-3">
-            <%= link_to user_followers_path(@user.username), class: 'link-dark text-underline-hover' do %>
-              <span class="fw-bold"><%= @user.followers_count %></span> Followers
-            <% end %>
-          </div>
-        </div>
-      </div>
+      <%= render 'user_info', user: @user %>
     </div>
   </div>
   <ul class="nav nav-tabs">
