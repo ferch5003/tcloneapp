@@ -3,8 +3,5 @@ module Users
     def index
       @pagy, @follows = pagy_array(social_user.get_follows(type: :followings))
     end
-  
-    def create
-    end
   end
 end

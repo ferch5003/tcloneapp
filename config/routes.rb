@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :search_users, only: %i[index create]
   resources :tweets, only: %i[new create]
   resources :users, only: %i[show] do
-    resources :follows, only: %i[index create], controller: 'users/follows'
+    resources :follows, only: %i[index], controller: 'users/follows'
     resources :followers, only: %i[index create], controller: 'users/followers'
   end
 
