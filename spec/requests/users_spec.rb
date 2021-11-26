@@ -5,7 +5,7 @@ RSpec.describe UsersController, type: :request do
 
   describe 'GET #show' do
     context 'when the user is not signed in' do
-      subject { get user_path(user.username) }
+      subject { get user_path(user.id) }
 
       it { is_expected.to redirect_to(new_user_session_path) }
     end
@@ -15,7 +15,7 @@ RSpec.describe UsersController, type: :request do
         sign_in(user)
       end
 
-      subject { get user_path(user.username) }
+      subject { get user_path(user.id) }
 
       context 'with tweets' do
         let!(:tweets) { create_list(:tweet, 3, user: user) }
