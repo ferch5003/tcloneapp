@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A clone of Twitter using RoR 6. Supports authentication, follows, tweet, and follow user by username features.
 
-Things you may want to cover:
+To run this project follow this steps:
 
-* Ruby version
+1. bundle
+3. rails db:create db:migrate
+4. (optional) rails db:setup
+5. foreman start -f Procfile.dev
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Link to the application server
+[TCloneApp](https://tcloneapp.herokuapp.com/)
