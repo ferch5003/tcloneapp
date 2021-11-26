@@ -7,7 +7,7 @@ module Users
     end
 
     def create
-      follow_user(social_user: social_user)
+      follow_user(social_user: social_user, failed_path: user_followers_path(social_user.username))
     end
   end
 end

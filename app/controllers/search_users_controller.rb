@@ -10,7 +10,7 @@ class SearchUsersController < ApplicationController
     @social_user = @q.result.first
 
     if @social_user
-      follow_user(social_user: @social_user)
+      follow_user(social_user: @social_user, failed_path: search_users_path)
     else
       redirect_to search_users_path, alert: "User @#{params[:q][:username_eq]} not exist"
     end
