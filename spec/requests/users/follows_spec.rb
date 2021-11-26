@@ -6,7 +6,7 @@ RSpec.describe Users::FollowsController, type: :request do
 
   describe 'GET #index' do
     context 'when the user is not signed in' do
-      subject { get user_follows_path(first_user.username) }
+      subject { get user_follows_path(first_user.id) }
 
       it { is_expected.to redirect_to(new_user_session_path) }
     end
@@ -16,7 +16,7 @@ RSpec.describe Users::FollowsController, type: :request do
         sign_in(first_user)
       end
 
-      subject { get user_follows_path(first_user.username) }
+      subject { get user_follows_path(first_user.id) }
 
       context 'without following any user' do
         before { subject }
