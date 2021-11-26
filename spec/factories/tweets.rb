@@ -20,7 +20,7 @@
 #
 FactoryBot.define do
   factory :tweet do
-    content { "MyString" }
-    user { nil }
+    association :user
+    sequence(:content) { |n| "Tweet_#{n}" }
   end
 end

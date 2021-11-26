@@ -21,4 +21,11 @@ User.create(
   password: '12345678'
 )
 
+User.create(
+  full_name: Faker::Name.name,
+  username: 'test_4',
+  email: 'test4@mail.com',
+  password: '12345678'
+)
+
 puts 'Users already seed!'

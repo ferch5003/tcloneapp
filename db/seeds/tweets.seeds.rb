@@ -1,8 +1,8 @@
 after :users do
   puts 'Seeding Tweets...'
 
-  100.times do
-    user_id = Faker::Number.between(from: 1, to: 3)
+  150.times do
+    user_id = Faker::Number.between(from: 1, to: 4)
     user = User.find(user_id)
 
     random_chars = rand(1..280)

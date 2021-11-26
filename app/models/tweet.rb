@@ -24,7 +24,7 @@ class Tweet < ApplicationRecord
   belongs_to :user
 
   scope :user_feed,
-        ->(user_ids) { Tweets::FeedsQuery.call(user_ids: user_ids) }
+        ->(user:) { Tweets::FeedsQuery.call(user_ids: user.feed_user_ids) }
 
   validates :content, presence: true, length: { maximum: 280 }
 end

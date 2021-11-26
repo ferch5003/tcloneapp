@@ -5,9 +5,7 @@ class Tweets::FeedsQuery < BaseQuery
   end
 
   def call
-    @relation.includes(%i[user])
-             .joins(user: :follows)
-             .where('follows.follower_id IN (?)', @user_ids)
+    @relation.where(user_id: @user_ids)
              .order('created_at DESC')
   end
 end
